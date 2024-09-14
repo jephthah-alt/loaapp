@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Form</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="styles/apply.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Loan Application Form</h1>
+        <p>Complete the form below to check your loan eligibility.</p>
+        <a href="index.html"><button style="background-color: #19441a;
+            color: white;
+            padding: 5px;
+            width: 100px;
+            text-align: center;">Home Page</button></a>
+    </header>
+
+    <div class="container">
+        <form id="loanForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name">
+                <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="income">Annual Income</label>
+                <input type="number" id="income" name="income" placeholder="Enter your annual income">
+                <small class="error" id="incomeError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="currentAmount">Current Amount in Account</label>
+                <input type="number" id="currentAmount" name="currentAmount" placeholder="Enter the current account balance">
+                <small class="error" id="currentAmountError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="loanAmount">Loan Amount Requested</label>
+                <input type="number" id="loanAmount" name="loanAmount" placeholder="Enter the loan amount">
+                <small class="error" id="loanAmountError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="accountType">Account Type</label>
+                <select id="accountType" name="accountType">
+                    <option value="">Select Account Type</option>
+                    <option value="current">Current</option>
+                    <option value="savings">Savings</option>
+                </select>
+                <small class="error" id="accountTypeError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="creditHistory">Credit History (1-6 months)</label>
+                <select id="creditHistory" name="creditHistory">
+                    <option value="">Select Credit History</option>
+                    <option value="1">1 month</option>
+                    <option value="2">2 months</option>
+                    <option value="3">3 months</option>
+                    <option value="4">4 months</option>
+                    <option value="5">5 months</option>
+                    <option value="6">6 months</option>
+                </select>
+                <small class="error" id="creditHistoryError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="lastDeposit">Last Deposit Date</label>
+                <input type="date" id="lastDeposit" name="lastDeposit">
+                <small class="error" id="lastDepositError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="lastLoan">Last Loan Collection Date</label>
+                <input type="date" id="lastLoan" name="lastLoan">
+                <small class="error" id="lastLoanError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="repaymentPeriod">Loan Repayment Period (in months)</label>
+                <input type="text" id="repaymentPeriod" name="repaymentPeriod" placeholder="Enter the repayment period">
+                <small class="error" id="repaymentPeriodError"></small>
+            </div>
+
+            <button type="submit">Submit Application</button>
+            <small id="resultMessage"></small>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
